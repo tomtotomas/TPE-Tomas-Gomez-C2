@@ -2,7 +2,7 @@
 
 Trabajo practico especial para la materia web 2 (2025) de la carrera TUDAI.
 
-Alumno: Tomas Agustin Gomez
+Alumno: Tomas Agustin Gomez <br>
 Email: tomas.a.gomez.zb@gmail.com
 
 ## TEMA DE LA PAGINA: REVIEWS DE USUARIOS A ALBUMS DE MUSICA
