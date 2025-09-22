@@ -30,3 +30,5 @@ La cantidad de tablas va a ser de 5. User, Albums, Artist, Reviews y Songs.
 | song_id | album_id | song_name | duration |
 |---------|----------|-----------|----------|
 
+<img width="1057" height="526" alt="db_music_DER" src="https://github.com/user-attachments/assets/10a79f45-a854-4ac8-83c8-37b696edbd7f" />
+
