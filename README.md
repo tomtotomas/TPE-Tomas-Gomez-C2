@@ -10,7 +10,7 @@ Email: tomas.a.gomez.zb@gmail.com
 En la pagina los usuarios podran dejar sus reviews a distintos albums de musica,
 quizas hasta puntuando los mismos, afectando el posicionamiento de los albums en el home.
 
-## TABLAS y MER
+## TABLAS y DER
 
 La cantidad de tablas va a ser de 5. User, Albums, Artist, Reviews y Songs.
 
@@ -18,8 +18,8 @@ La cantidad de tablas va a ser de 5. User, Albums, Artist, Reviews y Songs.
 | user_id | username | email | password |
 |---------|----------|-------|----------|
 #### ALBUMS:
-| album_id | album_name | album_image | artist_id | date | genre |
-|----------|------------|-------------|-----------|------|-------|
+| album_id | album_name | album_image | artist_id | date |
+|----------|------------|-------------|-----------|------|
 #### ARTIST:
 | artist_id | artist_name | artist_bio |
 |-----------|-------------|------------|
@@ -27,8 +27,9 @@ La cantidad de tablas va a ser de 5. User, Albums, Artist, Reviews y Songs.
 | review_id | user_id | album_id | review | rating | date |
 |-----------|---------|----------|--------|--------|------|
 #### SONGS:
-| song_id | album_id | song_name | duration |
-|---------|----------|-----------|----------|
+| song_id | album_id | song_number | song_name | duration |
+|---------|----------|-------------|-----------|----------|
 
-<img width="1057" height="526" alt="db_music_DER" src="https://github.com/user-attachments/assets/10a79f45-a854-4ac8-83c8-37b696edbd7f" />
+<img width="1080" height="561" alt="db_music_DER" src="https://github.com/user-attachments/assets/0d855a27-5629-4ab8-8217-1de8698a4e0e" />
+
 
