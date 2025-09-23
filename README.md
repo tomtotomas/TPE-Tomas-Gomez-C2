@@ -15,20 +15,20 @@ quizas hasta puntuando los mismos, afectando el posicionamiento de los albums en
 La cantidad de tablas va a ser de 5. User, Albums, Artist, Reviews y Songs.
 
 #### USER:
-| user_id | username | email | password |
-|---------|----------|-------|----------|
+| user_id (PK) | username | email | password |
+|--------------|----------|-------|----------|
 #### ALBUMS:
-| album_id | album_name | album_image | artist_id | date |
-|----------|------------|-------------|-----------|------|
+| album_id (PK) | album_name | album_image | artist_id (FK) | date |
+|---------------|------------|-------------|----------------|------|
 #### ARTIST:
-| artist_id | artist_name | artist_bio |
-|-----------|-------------|------------|
+| artist_id (PK) | artist_name | artist_bio |
+|----------------|-------------|------------|
 #### REVIEWS:
-| review_id | user_id | album_id | review | rating | date |
-|-----------|---------|----------|--------|--------|------|
+| review_id (PK) | user_id (FK) | album_id (FK) | review | rating | date |
+|----------------|--------------|---------------|--------|--------|------|
 #### SONGS:
-| song_id | album_id | song_number | song_name | duration |
-|---------|----------|-------------|-----------|----------|
+| song_id (PK) | album_id (FK) | song_number | song_name | duration |
+|--------------|---------------|-------------|-----------|----------|
 
 <img width="1080" height="561" alt="db_music_DER" src="https://github.com/user-attachments/assets/0d855a27-5629-4ab8-8217-1de8698a4e0e" />
 
