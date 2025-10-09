@@ -31,9 +31,6 @@
             $pageController->route($params);
             break;
 
-        case "artist":
-                showArtist($params[1]);
-            break;
 
         default:
             echo "404 - Página no encontrada";

@@ -12,7 +12,11 @@ quizas hasta puntuando los mismos, afectando el posicionamiento de los albums en
 
 ## TABLAS y DER
 
-La cantidad de tablas va a ser de 5. User, Albums, Artist, Reviews y Songs.
+La cantidad de tablas va a ser de 5. User, Albums, Artist, Reviews y Songs.<br>
+En mi proyecto hay sin querer, varias relaciones 1:N.<br>
+Un disco (1) tiene varias canciones (N).<br>
+Un disco (1) puede tener varias reviews (N).<br>
+Un artista (1) puede tener muchos albums (N).
 
 #### USER:
 | user_id (PK) | username | email | password |
