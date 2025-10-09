@@ -1,11 +1,16 @@
 <?php
 
-    include_once 'app/albums.controller.php';
+    include_once 'app/controllers/albums.controller.php';
+    include_once 'app/controllers/artist.controller.php';
+    include_once 'app/controllers/songs.controller.php';
+    include_once 'app/controllers/page.controller.php';
 
     // TABLA DE RUTEO
     // home - showHome()
     // album/:id - showAlbum($id)
     // artista/:id - showArtist($id)
+
+    require_once 'templates/header.phtml';
 
     if(!empty($_GET["action"])){
         $action = $_GET["action"];
@@ -16,19 +21,24 @@
     $params = explode("/", $action);
 
     switch ($params[0]){
-        case "home":
-            $home = new AlbumsController();
-            $home->showAlbums();
-            break;
-        case "album":
-            if(isset($params[1])){
-                showAlbum($params[1]);
-            } else {
-                showHome();
-            }
+
+        //hago un subruteo para no tener un chorizo de codigo aca
+        case 'home':
+        case 'album':
+        case 'artist':
+        case 'review':
+            $pageController = new PageController();
+            $pageController->route($params);
             break;
 
         case "artist":
                 showArtist($params[1]);
             break;
+
+        default:
+            echo "404 - Página no encontrada";
+            break;
     }
+
+    
+    require_once 'templates/footer.phtml';
