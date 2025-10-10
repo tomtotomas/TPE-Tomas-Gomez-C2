@@ -16,6 +16,16 @@ class ArtistsController {
 
     }
 
+    function showArtistAlbum($id){
+
+        $artistModel = new ArtistModel();
+        $artist = $artistModel->getArtistAlbum($id);
+
+        $view = new ArtistView();
+        $view->getArtist($artist);
+
+    }
+
     function showArtist($id){
 
         $artistModel = new ArtistModel();
@@ -27,7 +37,7 @@ class ArtistsController {
         }
 
         $view = new ArtistView();
-        $view->getArtist($artist);
+        $view->getArtistSolo($artist);
 
     }
 

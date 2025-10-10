@@ -12,7 +12,7 @@ class AlbumsView {
 
         foreach ($albums as $album) {
             echo '
-                <a><article>
+                <a href ="' . BASE_URL . 'album/' . $album->album_id . '"><article>
                     <img src=" ' . $album->album_image . '" width="300px" height="300px alt="' . $album->album_name . '">
                     <h3>' . $album->album_name . '</h3>
                     <h4> ' . $album->artist_name . ' </h4>
@@ -22,13 +22,15 @@ class AlbumsView {
 
         echo '</section>';
 
+        echo '<a href ="' . BASE_URL . 'albums"><p>Más albums >></p></a>';
+
     }
 
     function getAlbumView($album){
         echo '
-            <img src=" ' . $album->album_image . '" width="500px" height="500px alt="' . $album->album_name . '">
-            <h2>' . $album->album_name . '</h2>
-            <p>' . $album->date . '</p>
+                <img src=" ' . $album->album_image . '" width="500px" height="500px alt="' . $album->album_name . '">
+                <h2>' . $album->album_name . '</h2>
+                <p>' . $album->date . '</p>
         ';
 
     }
@@ -39,9 +41,9 @@ class AlbumsView {
 
         foreach ($albums as $album) {
             echo '
-                <a><article>
+                <a href="' . BASE_URL . 'album/' . $album->album_id . ' "><div>
                     <img src=" ' . $album->album_image . '" width="300px" height="300px alt="' . $album->album_name . '">
-                </article></a>
+                </div></a>
             ';
         };
 

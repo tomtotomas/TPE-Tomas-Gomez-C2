@@ -21,6 +21,19 @@ class ArtistModel {
 
     }
 
+    function getArtistAlbum($id) {
+
+        $query = $this->db->prepare("SELECT artist.* FROM artist
+                                    JOIN albums ON artist.artist_id = albums.artist_id
+                                    WHERE albums.album_id = ?");
+        $query->execute([$id]);
+        
+        $artist = $query->fetch(PDO::FETCH_OBJ);
+        return $artist;
+
+
+    }
+
     function getArtist($id) {
 
         $query = $this->db->prepare("SELECT * FROM artist WHERE artist_id = ?");

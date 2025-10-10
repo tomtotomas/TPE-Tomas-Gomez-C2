@@ -38,7 +38,8 @@ class AlbumsModel {
         $query = $this->db->prepare(" SELECT albums.*, artist.artist_name 
                                 FROM albums
                                 JOIN artist ON albums.artist_id = artist.artist_id
-                                WHERE artist.artist_id = ?");
+                                WHERE artist.artist_id = ?
+                                ORDER BY albums.date ASC");
         $query->execute([$id]);
         $albums = $query->fetchAll(PDO::FETCH_OBJ);
         return $albums;
